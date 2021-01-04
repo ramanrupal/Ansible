@@ -1,6 +1,6 @@
 ---
   - name: Make a directory
     file: 
-      path: /var
+      path: /var/samplefile.txt
       state: touch
  
