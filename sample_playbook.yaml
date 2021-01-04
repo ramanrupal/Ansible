@@ -1,0 +1,6 @@
+---
+  - name: Make a directory
+    file: 
+      path: /var
+      state: touch
+ 
