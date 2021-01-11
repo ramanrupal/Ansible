@@ -1,0 +1,15 @@
+---
+- hosts: all
+  tasks:
+
+        - name: Install "{{ package }}"
+          apt: 
+                name: "{{ package }}"
+                state: latest
+
+        - name: Start the "{{ package }}" 
+          service:
+                name: "{{ package }}"
+                state: started
+
+ 
