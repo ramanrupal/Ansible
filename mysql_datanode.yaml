@@ -1,0 +1,21 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata: 
+  name: mysql-datanode
+  labels:
+    app: mysql-datanode
+spec:
+  replicas: 1
+  selector: 
+    app: mysql-datanode
+  template:
+    metadata:
+      labels:
+        app: mysql-datanode
+    spec:
+      containers:
+      - name: mysql-datanode-container
+        image: #(mysql data image here)
+        ports:
+        - containerPort: 2202
+
